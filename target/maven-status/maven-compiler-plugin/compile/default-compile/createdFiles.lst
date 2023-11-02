@@ -1,0 +1,12 @@
+org/isetn/ClasseRepository.class
+org/isetn/ScolA7Application.class
+org/isetn/UserController.class
+org/isetn/Etudiant.class
+org/isetn/FormationRepository.class
+org/isetn/UserRepository.class
+org/isetn/Formation.class
+org/isetn/EtudiantProjection.class
+org/isetn/EtudiantRepository.class
+org/isetn/GlobalRepositoryRestConfigurer.class
+org/isetn/Classe.class
+org/isetn/User.class
