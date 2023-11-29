@@ -1,4 +1,4 @@
-package org.isetn;
+package org.isetn.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +13,8 @@ import java.util.Collection;
 @NoArgsConstructor
 public class User {
 
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String email;
     String password;

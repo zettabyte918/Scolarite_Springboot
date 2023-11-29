@@ -1,12 +1,12 @@
-package org.isetn;
+package org.isetn.controllers;
 
+import org.isetn.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
 public class UserController {
 
     @Autowired
@@ -16,9 +16,10 @@ public class UserController {
     public User Register(@RequestBody User user) {
         return userRepository.save(user);
     }
+
     @PostMapping("/login")
     public User Login(@RequestBody User user) {
-        User oldUSer = userRepository.findByEmailAndPassword(user.email, user.password);
+        User oldUSer = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
         return oldUSer;
     }
 }

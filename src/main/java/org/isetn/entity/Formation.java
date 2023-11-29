@@ -1,4 +1,4 @@
-package org.isetn;
+package org.isetn.entity;
 
 import java.util.Collection;
 import java.util.Date;
@@ -12,15 +12,17 @@ import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Formation {
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nom;
 	private int duree;
-	@OneToMany(mappedBy="formation")
-	private Collection<Etudiant> etudiants; 
+	@OneToMany(mappedBy = "formation")
+	private Collection<Etudiant> etudiants;
 }

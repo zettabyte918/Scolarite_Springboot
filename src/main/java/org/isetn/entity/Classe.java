@@ -1,10 +1,11 @@
-package org.isetn;
+package org.isetn.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
 import java.util.Collection;
 
 @Entity
@@ -12,10 +13,11 @@ import java.util.Collection;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Classe {
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codClass;
 	private String nomClass;
 	private int nbreEtud;
-	@OneToMany(mappedBy="classe")
-	private Collection<Etudiant> etudiants; 
+	@OneToMany(mappedBy = "classe")
+	private Collection<Etudiant> etudiants;
 }
